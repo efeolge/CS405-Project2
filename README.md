@@ -1,45 +1,57 @@
-# CS405-Project2
+# Computer Graphics Project 2
 
-Computer Graphics Project 2 - Texture and Lighting Implementation
-Task 1: Texture Handling
-In this task, I implemented texture handling for non-power-of-2 sized images in WebGL. The main implementation was done in the setTexture method:
+## Overview
+This project implements texture handling and lighting systems in WebGL.
 
-Added proper texture parameter handling for both power-of-2 and non-power-of-2 textures
-Used CLAMP_TO_EDGE for texture wrapping to prevent artifacts
-Implemented appropriate texture filtering using LINEAR for both minification and magnification
-Supported loading of both JPEG and PNG image formats
-Successfully tested with the provided leaves.jpg image
+## Implementation Details
 
-Task 2: Lighting Implementation
-For the lighting system, I implemented:
+### Task 1: Texture Handling Implementation
+#### Features
+* Support for non-power-of-2 sized images
+* Multiple image format compatibility (JPEG, PNG)
+* Enhanced texture parameter handling
+* Proper texture wrapping and filtering
 
-Added lighting uniforms in the constructor:
+#### Technical Details
+* ```CLAMP_TO_EDGE``` wrapping implementation
+* ```LINEAR``` filtering for both minification and magnification
+* Efficient texture memory management
+* Tested successfully with provided test images (leaves.jpg)
 
-Light position
-Enable/disable lighting
-Ambient light intensity
-Specular light intensity
+### Task 2: Lighting System Implementation
+#### Core Components
+* Ambient lighting
+* Diffuse lighting
+* Specular lighting
+* Dynamic light positioning
 
+#### Key Features
+* Real-time light control using arrow keys
+* Adjustable lighting parameters via UI
+* Shader-based lighting calculations
+* Integrated texture and lighting systems
 
-Modified vertex and fragment shaders to handle:
+#### Controls
+* Arrow Keys: Move light position
+* UI Sliders:
+  * Ambient Light Density
+  * Specular Light Intensity
+* Toggles:
+  * Enable Light
+  * Show Texture
 
-Ambient lighting
-Diffuse lighting
-Specular lighting effects
+## Testing
+All features have been thoroughly tested with:
+* Various 3D models
+* Different texture types
+* Multiple lighting configurations
 
+## Usage
+1. Load a 3D model (.obj file)
+2. Apply texture (supports both power-of-2 and non-power-of-2 images)
+3. Enable lighting
+4. Adjust lighting parameters as needed
+5. Use arrow keys to position the light source
 
-Implemented lighting control functions:
-
-enableLighting(): Toggles lighting on/off
-setAmbientLight(): Controls ambient light intensity
-setSpecularLight(): Adjusts specular highlights
-
-
-
-The lighting system allows for dynamic light position control using arrow keys and adjustable lighting parameters through the UI sliders.
-Testing
-
-The implementation was tested using various 3D models
-Light position can be controlled using arrow keys
-Light intensities can be adjusted using the UI sliders
-Both textured and lit rendering work as expected
+---
+*Project completed as part of Computer Graphics course*
